@@ -10,6 +10,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  *
@@ -19,6 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode(exclude = "rootCategory")
+@ToString
 @Entity
 public class Category implements Serializable {
 
