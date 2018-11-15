@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
+import org.telegram.telegrambots.ApiContextInitializer;
 
 @SpringBootApplication
 @EnableTransactionManagement
@@ -39,6 +40,7 @@ public class BusinessMonitorApplication {
     }
 
     public static void main(String[] args) {
+        ApiContextInitializer.init();
         SpringApplication.run(BusinessMonitorApplication.class, args);
     }
 
