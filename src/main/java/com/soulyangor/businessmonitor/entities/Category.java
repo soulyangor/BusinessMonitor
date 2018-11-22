@@ -30,7 +30,14 @@ public class Category implements Serializable {
 
     private String name;
 
+    private String treePath;
+
     @ManyToOne
-    private Category rootCategory;
+    private Category parentCategory;
+    
+    public void setParentCategory(Category parentCategory) {
+        this.parentCategory = parentCategory;
+        this.treePath = parentCategory.treePath + "." + name;
+    }
 
 }

@@ -35,6 +35,9 @@ public class Sale implements Serializable {
     private Product product;
 
     @ManyToOne
+    private CheckOrder checkOrder;
+
+    @ManyToOne
     private DeliveryOrder deliveryOrder;
 
     public BigDecimal getCost() {

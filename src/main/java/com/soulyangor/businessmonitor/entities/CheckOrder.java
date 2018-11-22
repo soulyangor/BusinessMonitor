@@ -2,12 +2,10 @@ package com.soulyangor.businessmonitor.entities;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.EqualsAndHashCode;
@@ -32,7 +30,5 @@ public class CheckOrder implements Serializable {
 
     @Temporal(TemporalType.DATE)
     private Date sellingDate;
-
-    @OneToMany
-    private List<Sale> sales;
+    
 }
